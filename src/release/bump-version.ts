@@ -1,6 +1,6 @@
-import { dirname, join } from "path";
 import { Config } from "conventional-changelog-config-spec";
 import { mkdirp, pathExists, readFile, remove, writeFile } from "fs-extra";
+import { dirname, join } from "path";
 import * as logging from "../logging";
 import { exec, execCapture } from "../util";
 
@@ -147,7 +147,7 @@ export async function bump(cwd: string, options: BumpOptions) {
     options.versionrcOptions
   );
 
-  const cmd = ["npx", "standard-version@^9"];
+  const cmd = ["npx", "semantic-release"];
   if (isFirstRelease) {
     cmd.push("--first-release");
   }

@@ -28,17 +28,17 @@ jobs:
       - name: build
         run: /bin/bash ./projen.bash build
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v1
         with:
           directory: coverage
       - name: Find mutations
         id: self_mutation
         run: |-
           git add .
-          git diff --staged --patch --exit-code > .repo.patch || echo "self_mutation_happened=true" >> $GITHUB_OUTPUT
+          git diff --staged --patch --exit-code > .repo.patch || echo "::set-output name=self_mutation_happened::true"
       - name: Upload patch
         if: steps.self_mutation.outputs.self_mutation_happened
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: .repo.patch
           path: .repo.patch
@@ -52,7 +52,7 @@ jobs:
         run: cd dist && getfacl -R . > permissions-backup.acl
         continue-on-error: true
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2.1.1
         with:
           name: build-artifact
           path: dist
@@ -148,7 +148,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14.18.0
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v3
         with:
           python-version: 3.x
       - name: Download build artifacts
@@ -202,7 +202,7 @@ jobs:
       contents: read
     if: "! needs.build.outputs.self_mutation_happened"
     steps:
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v3
         with:
           python-version: 3.x
       - uses: actions/setup-go@v3

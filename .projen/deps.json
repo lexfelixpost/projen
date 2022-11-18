@@ -1,6 +1,18 @@
 {
   "dependencies": [
     {
+      "name": "@semantic-release/changelog",
+      "type": "build"
+    },
+    {
+      "name": "@semantic-release/commit-analyzer",
+      "type": "build"
+    },
+    {
+      "name": "@semantic-release/release-notes-generator",
+      "type": "build"
+    },
+    {
       "name": "@types/conventional-changelog-config-spec",
       "type": "build"
     },
@@ -200,6 +212,16 @@
     {
       "name": "@types/prettier",
       "version": "2.6.0",
+      "type": "override"
+    },
+    {
+      "name": "@types/responselike",
+      "version": "1.0.0",
+      "type": "override"
+    },
+    {
+      "name": "got",
+      "version": "12.3.1",
       "type": "override"
     }
   ],

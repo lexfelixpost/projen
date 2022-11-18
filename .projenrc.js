@@ -53,6 +53,9 @@ const project = new cdk.JsiiProject({
     "esbuild",
     "all-contributors-cli",
     "json5",
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
   ],
 
   depsUpgradeOptions: {
