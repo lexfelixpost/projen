@@ -2444,7 +2444,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -2893,7 +2893,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -4528,7 +4528,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -5231,7 +5231,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -5665,7 +5665,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -7462,7 +7462,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -9283,7 +9283,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -9709,7 +9709,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -11285,7 +11285,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -11925,7 +11925,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -12280,7 +12280,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -14023,7 +14023,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -14695,7 +14695,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -14963,7 +14963,7 @@ Array [
         "switch": "catalog",
       },
       Object {
-        "default": "\\"^0.13.0\\"",
+        "default": "\\"^0.8.3\\"",
         "docs": "Minimum target version this library is tested against.",
         "featured": true,
         "fullType": Object {
@@ -15016,7 +15016,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -16725,7 +16725,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -18194,7 +18194,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -18480,7 +18480,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -20172,7 +20172,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -20829,7 +20829,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -21115,7 +21115,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -22450,7 +22450,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -23003,7 +23003,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -23289,7 +23289,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -24780,7 +24780,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -25405,7 +25405,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -25691,7 +25691,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -27026,7 +27026,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -28636,7 +28636,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -28922,7 +28922,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -30257,7 +30257,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -30798,7 +30798,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -31084,7 +31084,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -32575,7 +32575,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -33205,7 +33205,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -33491,7 +33491,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -34982,7 +34982,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {
@@ -35590,7 +35590,7 @@ Array [
         "switch": "author-name",
       },
       Object {
-        "docs": "Is the author an organization.",
+        "docs": "Author's Organization.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -35876,7 +35876,7 @@ Array [
       },
       Object {
         "default": "false",
-        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.",
+        "docs": "Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.",
         "featured": false,
         "fullType": Object {
           "primitive": "boolean",
@@ -37367,7 +37367,7 @@ Array [
         "switch": "release-schedule",
       },
       Object {
-        "default": "\\"v\\"",
+        "default": "- no prefix",
         "docs": "Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.",
         "featured": false,
         "fullType": Object {

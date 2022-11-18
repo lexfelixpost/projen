@@ -9,6 +9,7 @@
       "prerelease": true
     }
   ],
+  "ci": false,
   "repositoryUrl": "git@github.com:lexfelixpost/projen.git",
   "plugins": [
     "@semantic-release/commit-analyzer",

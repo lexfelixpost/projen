@@ -289,10 +289,10 @@ jobs:
         id: self_mutation
         run: |-
           git add .
-          git diff --staged --patch --exit-code > .repo.patch || echo \\"self_mutation_happened=true\\" >> $GITHUB_OUTPUT
+          git diff --staged --patch --exit-code > .repo.patch || echo \\"::set-output name=self_mutation_happened::true\\"
       - name: Upload patch
         if: steps.self_mutation.outputs.self_mutation_happened
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: .repo.patch
           path: .repo.patch
@@ -306,7 +306,7 @@ jobs:
         run: cd dist && getfacl -R . > permissions-backup.acl
         continue-on-error: true
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2.1.1
         with:
           name: build-artifact
           path: dist
@@ -402,7 +402,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14.0.0
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v3
         with:
           python-version: 3.x
       - name: Download build artifacts
@@ -487,14 +487,14 @@ jobs:
         run: npx projen release
       - name: Check for new commits
         id: git_remote
-        run: echo \\"latest_commit=$(git ls-remote origin -h \${{ github.ref }} | cut -f1)\\" >> $GITHUB_OUTPUT
+        run: echo ::set-output name=latest_commit::\\"$(git ls-remote origin -h \${{ github.ref }} | cut -f1)\\"
       - name: Backup artifact permissions
         if: \${{ steps.git_remote.outputs.latest_commit == github.sha }}
         run: cd dist && getfacl -R . > permissions-backup.acl
         continue-on-error: true
       - name: Upload artifact
         if: \${{ steps.git_remote.outputs.latest_commit == github.sha }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2.1.1
         with:
           name: build-artifact
           path: dist
@@ -610,7 +610,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14.0.0
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v3
         with:
           python-version: 3.x
       - name: Download build artifacts
@@ -667,10 +667,10 @@ jobs:
         id: create_patch
         run: |-
           git add .
-          git diff --staged --patch --exit-code > .repo.patch || echo \\"patch_created=true\\" >> $GITHUB_OUTPUT
+          git diff --staged --patch --exit-code > .repo.patch || echo \\"::set-output name=patch_created::true\\"
       - name: Upload patch
         if: steps.create_patch.outputs.patch_created
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: .repo.patch
           path: .repo.patch
@@ -941,6 +941,16 @@ tsconfig.tsbuildinfo
         "name": "@types/prettier",
         "type": "override",
         "version": "2.6.0",
+      },
+      Object {
+        "name": "@types/responselike",
+        "type": "override",
+        "version": "1.0.0",
+      },
+      Object {
+        "name": "got",
+        "type": "override",
+        "version": "12.3.1",
       },
       Object {
         "name": "@aws-cdk/aws-apigateway",
@@ -1358,7 +1368,7 @@ UNEXPECTED BREAKING CHANGES: add keys such as 'removed:constructs.Node.of' to .c
         "name": "test",
         "steps": Array [
           Object {
-            "exec": "jest --passWithNoTests --coverageProvider=v8 --updateSnapshot",
+            "exec": "jest --passWithNoTests --all --coverageProvider=v8 --updateSnapshot",
           },
           Object {
             "spawn": "eslint",
@@ -1856,6 +1866,8 @@ project.synth();
     },
     "resolutions": Object {
       "@types/prettier": "2.6.0",
+      "@types/responselike": "1.0.0",
+      "got": "12.3.1",
     },
     "scripts": Object {
       "build": "npx projen build",
@@ -2246,10 +2258,10 @@ jobs:
         id: create_patch
         run: |-
           git add .
-          git diff --staged --patch --exit-code > .repo.patch || echo \\"patch_created=true\\" >> $GITHUB_OUTPUT
+          git diff --staged --patch --exit-code > .repo.patch || echo \\"::set-output name=patch_created::true\\"
       - name: Upload patch
         if: steps.create_patch.outputs.patch_created
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: .repo.patch
           path: .repo.patch
@@ -2505,6 +2517,16 @@ tsconfig.tsbuildinfo
         "version": "2.6.0",
       },
       Object {
+        "name": "@types/responselike",
+        "type": "override",
+        "version": "1.0.0",
+      },
+      Object {
+        "name": "got",
+        "type": "override",
+        "version": "12.3.1",
+      },
+      Object {
         "name": "constructs",
         "type": "peer",
       },
@@ -2734,7 +2756,7 @@ UNEXPECTED BREAKING CHANGES: add keys such as 'removed:constructs.Node.of' to .c
         "name": "test",
         "steps": Array [
           Object {
-            "exec": "jest --passWithNoTests --updateSnapshot",
+            "exec": "jest --passWithNoTests --all --updateSnapshot",
           },
           Object {
             "spawn": "eslint",
@@ -3339,6 +3361,8 @@ project.synth();
     },
     "resolutions": Object {
       "@types/prettier": "2.6.0",
+      "@types/responselike": "1.0.0",
+      "got": "12.3.1",
     },
     "scripts": Object {
       "build": "yarn compile",
@@ -3728,10 +3752,10 @@ jobs:
         id: create_patch
         run: |-
           git add .
-          git diff --staged --patch --exit-code > .repo.patch || echo \\"patch_created=true\\" >> $GITHUB_OUTPUT
+          git diff --staged --patch --exit-code > .repo.patch || echo \\"::set-output name=patch_created::true\\"
       - name: Upload patch
         if: steps.create_patch.outputs.patch_created
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: .repo.patch
           path: .repo.patch
@@ -3931,6 +3955,16 @@ tsconfig.tsbuildinfo
         "type": "build",
       },
       Object {
+        "name": "@types/responselike",
+        "type": "override",
+        "version": "1.0.0",
+      },
+      Object {
+        "name": "got",
+        "type": "override",
+        "version": "12.3.1",
+      },
+      Object {
         "name": "@types/node",
         "type": "runtime",
       },
@@ -4128,7 +4162,7 @@ tsconfig.tsbuildinfo
         "name": "test",
         "steps": Array [
           Object {
-            "exec": "jest --passWithNoTests --updateSnapshot",
+            "exec": "jest --passWithNoTests --all --updateSnapshot",
           },
           Object {
             "spawn": "eslint",
@@ -4686,6 +4720,10 @@ project.synth();
       "type": "git",
       "url": "https://github.com/awslabs/cdk8s.git",
     },
+    "resolutions": Object {
+      "@types/responselike": "1.0.0",
+      "got": "12.3.1",
+    },
     "scripts": Object {
       "build": "yarn compile",
       "clobber": "npx projen clobber",
@@ -4844,10 +4882,10 @@ jobs:
         id: self_mutation
         run: |-
           git add .
-          git diff --staged --patch --exit-code > .repo.patch || echo \\"self_mutation_happened=true\\" >> $GITHUB_OUTPUT
+          git diff --staged --patch --exit-code > .repo.patch || echo \\"::set-output name=self_mutation_happened::true\\"
       - name: Upload patch
         if: steps.self_mutation.outputs.self_mutation_happened
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: .repo.patch
           path: .repo.patch
@@ -4952,14 +4990,14 @@ jobs:
         run: npx projen release
       - name: Check for new commits
         id: git_remote
-        run: echo \\"latest_commit=$(git ls-remote origin -h \${{ github.ref }} | cut -f1)\\" >> $GITHUB_OUTPUT
+        run: echo ::set-output name=latest_commit::\\"$(git ls-remote origin -h \${{ github.ref }} | cut -f1)\\"
       - name: Backup artifact permissions
         if: \${{ steps.git_remote.outputs.latest_commit == github.sha }}
         run: cd dist && getfacl -R . > permissions-backup.acl
         continue-on-error: true
       - name: Upload artifact
         if: \${{ steps.git_remote.outputs.latest_commit == github.sha }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2.1.1
         with:
           name: build-artifact
           path: dist
@@ -5021,10 +5059,10 @@ jobs:
         id: create_patch
         run: |-
           git add .
-          git diff --staged --patch --exit-code > .repo.patch || echo \\"patch_created=true\\" >> $GITHUB_OUTPUT
+          git diff --staged --patch --exit-code > .repo.patch || echo \\"::set-output name=patch_created::true\\"
       - name: Upload patch
         if: steps.create_patch.outputs.patch_created
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: .repo.patch
           path: .repo.patch
@@ -5372,7 +5410,7 @@ permissions-backup.acl
         "name": "test",
         "steps": Array [
           Object {
-            "exec": "jest --passWithNoTests --updateSnapshot",
+            "exec": "jest --passWithNoTests --all --updateSnapshot",
           },
         ],
       },
